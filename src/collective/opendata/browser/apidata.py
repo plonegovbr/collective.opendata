@@ -56,7 +56,7 @@ class APIDataView(BrowserPage):
         if plugin:
             if entity:
                 data = entity()
-                response = plugin.json(data) if data else 'Bar'
+                response = plugin.json(data) if data else '{}'
             else:
                 response = plugin.json(plugin.entities())
         else:
