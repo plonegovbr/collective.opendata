@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      metal:use-macro="here/main_template/macros/master">
+
+  <body>
+      <metal:content-title fill-slot="content-title">
+          <h1 class="documentFirstHeading">
+          Open Data
+          </h1>
+      </metal:content-title>
+
+      <metal:content-description fill-slot="content-description">
+          <div class="documentDescription">
+            Dados abertos
+          </div>
+      </metal:content-description>
+
+      <metal:content-core fill-slot="content-core"
+                          tal:define="plugins view/plugins">
+          <div tal:repeat="plugin plugins">
+            <h2 tal:content="plugin/title">My Plugin</h2>
+            The base API URL is:
+            <a href=""
+              tal:attributes="href plugin/uri"
+              tal:content="plugin/uri">
+              apidata/foo
+            </a><br />
+            <span tal:content="plugin/description">My Plugin</span><br />
+            <!-- Entities -->
+            <ul>
+              <li tal:repeat="entity plugin/entities">
+                <a href=""
+                  tal:attributes="href entity/uri"
+                  tal:content="entity/title">
+                  apidata/foo
+                </a>: <span tal:content="entity/description">A text about this entity</span>
+                <!-- Fields -->
+                <ul>
+                  <li tal:repeat="field entity/fields">
+                    <span tal:content="field/title">Field</span> - <span tal:content="field/description">A text about this field</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </metal:content-core>
+
+  </body>
+</html>

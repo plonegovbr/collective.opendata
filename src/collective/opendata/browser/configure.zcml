@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+    <browser:page
+        for="Products.CMFCore.interfaces.ISiteRoot"
+        name="open-data"
+        class=".opendata.OpenDataView"
+        permission="zope2.View"
+        template="templates/opendata.pt"
+        />
+
+    <browser:page
+        for="Products.CMFCore.interfaces.ISiteRoot"
+        name="apidata"
+        class=".apidata.APIDataView"
+        permission="zope2.View"
+        />
+
+</configure>
