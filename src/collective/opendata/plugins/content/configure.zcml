@@ -1,0 +1,9 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Register Plugin -->
+  <utility
+      factory="collective.opendata.plugins.content.Content"
+      name="content" />
+
+</configure>

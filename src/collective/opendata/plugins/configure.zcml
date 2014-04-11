@@ -4,4 +4,7 @@
   <!-- Plugin CMS -->
   <include package=".cms" />
 
+  <!-- Plugin Content -->
+  <include package=".content" />
+
 </configure>
