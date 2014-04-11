@@ -24,7 +24,7 @@ class CMS(DataPlugin):
         }
     }
 
-    def site_info(self):
+    def site_info(self, request=None, **kwargs):
         """ Returns site information
 
         :returns: dictionary with site information

@@ -55,7 +55,8 @@ class APIDataView(BrowserPage):
         entity = self.entity
         if plugin:
             if entity:
-                data = entity()
+                subpath = self._subpath()
+                data = entity(request, subpath=subpath)
                 response = plugin.json(data) if data else '{}'
             else:
                 response = plugin.json(plugin.entities())
