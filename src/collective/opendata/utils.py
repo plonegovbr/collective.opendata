@@ -2,6 +2,7 @@
 from collective.opendata.interfaces import IDataPlugin
 from datetime import date
 from datetime import datetime
+from DateTime import DateTime
 from plone.namedfile.file import NamedBlobImage
 from z3c.relationfield.interfaces import IRelationValue
 from zope.component import getUtilitiesFor
@@ -36,6 +37,9 @@ def type_cast(value):
 
     elif isinstance(value, datetime):
         return value.isoformat()
+
+    elif isinstance(value, DateTime):
+        return value.ISO()
 
     elif isinstance(value, NamedBlobImage):
         # XXX: we need to decide what to do with the images
