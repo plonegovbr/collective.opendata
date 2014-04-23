@@ -39,10 +39,11 @@ setup(
     zip_safe=False,
     install_requires=[
         'plone.api',
-        'plone.app.upgrade',
+        'plone.namedfile',
         'Products.CMFPlone >=4.3',
-        'Products.GenericSetup',
         'setuptools',
+        'z3c.relationfield',
+        'zope.component',
         'zope.i18nmessageid',
         'zope.interface',
     ],
@@ -50,7 +51,6 @@ setup(
         'test': [
             'plone.app.robotframework',
             'plone.app.testing [robot] >=4.2.2',
-            'plone.browserlayer',
             'plone.testing',
             'robotsuite',
         ],
