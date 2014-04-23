@@ -3,8 +3,8 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.1'
-description = 'FIXME'
+version = '1.0a1'
+description = 'A generic implementation of the Open Data Protocol for Plone.'
 long_description = (
     open('README.rst').read() + '\n' +
     open('CONTRIBUTORS.rst').read() + '\n' +
@@ -28,7 +28,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    keywords='plonegovbr opendata api',
+    keywords='plone open data odata api',
     author='PloneGov-BR',
     author_email='gov@plone.org.br',
     url='https://github.com/plonegovbr/collective.opendata',

@@ -1,22 +1,17 @@
-***************************************************************
-`collective.opendata`
-***************************************************************
+*******************
+collective.opendata
+*******************
 
-.. contents:: Conteúdo
+.. contents:: Content
    :depth: 2
 
-Introdução
------------
+Introduction
+============
 
-TODO
+A generic implementation of the `Open Data Protocol`_ (OData) for Plone.
 
-Requisitos
-------------
+OData is a standardized protocol for creating and consuming data APIs.
+OData builds on core protocols like HTTP and commonly accepted methodologies like REST.
+The result is a uniform way to expose full-featured data APIs.
 
-TODO
-
-
-Estado deste pacote
----------------------
-
-TODO
+.. _`Open Data Protocol`: http://www.odata.org/
