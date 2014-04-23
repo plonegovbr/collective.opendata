@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 from collective.opendata.interfaces import IDataPlugin
-from zope.component import getUtilitiesFor
-# from z3c.relationfield.interfaces import IRelationValue
-from plone.namedfile.file import NamedBlobImage
-
 from datetime import date
 from datetime import datetime
+from plone.namedfile.file import NamedBlobImage
+from z3c.relationfield.interfaces import IRelationValue
+from zope.component import getUtilitiesFor
 
 
 def plugins():
@@ -33,7 +32,7 @@ def type_cast(value):
         return ''
 
     elif isinstance(value, date):
-        return value.strftime('%Y-%m-%d')
+        return value.isoformat()
 
     elif isinstance(value, datetime):
         return value.isoformat()
@@ -43,24 +42,21 @@ def type_cast(value):
         #      we can embed them or use an URL to point to
         return 'image'
 
-#    elif IRelationValue.providedBy(value):
-#        return value.to_path
+    elif IRelationValue.providedBy(value):
+        # return just the path to the related object for now
+        return value.to_path
 
     elif isinstance(value, list):
-
-        # XXX: we don't want to mess around the original
+        # XXX: we don't want to mess around the original list
         # object so we just create a copy of the value
         tmp = list(value)
-        # we must take care of two scenaries: in one we are
-        # storing relations; on the other, just values
         for i in tmp:
-            # if IRelationValue.providedBy(i):
-                # return just the path to the related object for now
-            #     tmp[tmp.index(i)] = type_cast(i)
+            # call function recursively on each value of the list
             if type(i) == dict:
-                # call function recursively on each value of the list
                 tmp[tmp.index(i)] = dict(
                     (v[0], type_cast(v[1])) for v in i.items())
+            else:
+                tmp[tmp.index(i)] = type_cast(i)
         return tmp
 
     return value
