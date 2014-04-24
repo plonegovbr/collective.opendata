@@ -15,3 +15,11 @@ OData builds on core protocols like HTTP and commonly accepted methodologies lik
 The result is a uniform way to expose full-featured data APIs.
 
 .. _`Open Data Protocol`: http://www.odata.org/
+
+.. image:: https://secure.travis-ci.org/plonegovbr/collective.opendata.png?branch=master
+    :alt: Travis CI badge
+    :target: http://travis-ci.org/plonegovbr/collective.opendata
+
+.. image:: https://coveralls.io/repos/plonegovbr/collective.opendata/badge.png?branch=master
+    :alt: Coveralls badge
+    :target: https://coveralls.io/r/plonegovbr/collective.opendata
