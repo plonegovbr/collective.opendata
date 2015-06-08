@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collective.opendata import _
 from collective.opendata.interfaces import IDataPlugin
 from collective.opendata.plugins import DataPlugin
 from plone import api
@@ -27,10 +28,10 @@ class Content(DataPlugin):
     implements(IDataPlugin)
 
     name = 'content'
-    title = 'Content Metadata'
-    description = '''Content information'''
+    title = _(u'Content Metadata')
+    description = _(u'''Content information''')
 
-    portal_types = ['File', 'Document', 'Image', 'Event', 'News Item', 'Folder']
+    portal_types = [_(u'File'), _(u'Document'), _(u'Image'), _(u'Event'), _(u'News Item'), _(u'Folder')]
 
     def __init__(self, *args, **kwargs):
 
@@ -51,16 +52,16 @@ class Content(DataPlugin):
     def structure(self):
         structure = {}
         dc_fields = {
-            'uri': 'Content URI',
-            'url': 'Content site address',
-            'Id': 'Content id',
-            'Title': 'Dublin Core Title element - resource name.',
-            'Description': 'Dublin Core Description element - resource name.',
-            'Creator': 'Dublin Core Creator element - resource author.',
+            'uri': _(u'Content URI'),
+            'url': _(u'Content site address'),
+            'Id': _(u'Content id'),
+            'Title': _(u'Dublin Core Title element - resource name.'),
+            'Description': _(u'Dublin Core Description element - resource name.'),
+            'Creator': _(u'Dublin Core Creator element - resource author.'),
         }
         for portal_type in self.portal_types:
             structure[portal_type] = {
-                'description': 'Dublin Core info for {0}'.format(portal_type)
+                'description': 'Dublin Core info for {0}'.format(portal_type) #TODO Add i18n support.
             }
             structure[portal_type]['fields'] = dc_fields.copy()
         return structure

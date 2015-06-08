@@ -9,4 +9,7 @@
   <include package=".browser" />
   <include package=".plugins" />
 
+  <!-- Locales folder register -->
+  <i18n:registerTranslations directory="locales" />
+
 </configure>

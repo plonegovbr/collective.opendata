@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collective.opendata import _
 from collective.opendata.interfaces import IDataPlugin
 from collective.opendata.plugins import DataPlugin
 from plone import api
@@ -9,17 +10,17 @@ class CMS(DataPlugin):
     implements(IDataPlugin)
 
     name = 'cms'
-    title = 'CMS'
-    description = '''Information about the CMS used in this portal'''
+    title = _(u'CMS')
+    description = _(u'''Information about the CMS used in this portal''')
 
     structure = {
         'site_info': {
-            'description': 'Information about a portal',
+            'description': _(u'Information about a portal'),
             'fields': {
-                'title': 'Site title',
-                'description': 'Site description',
-                'software': 'CMS used',
-                'software_version': 'CMS version',
+                'title': _(u'Site title'),
+                'description': _(u'Site description'),
+                'software': _(u'CMS used'),
+                'software_version': _(u'CMS version'),
             }
         }
     }
