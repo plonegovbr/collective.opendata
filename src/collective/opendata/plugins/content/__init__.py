@@ -61,7 +61,7 @@ class Content(DataPlugin):
         }
         for portal_type in self.portal_types:
             structure[portal_type] = {
-                'description': 'Dublin Core info for {0}'.format(portal_type) #TODO Add i18n support.
+                'description': 'Dublin Core info for {0}'.format(portal_type)  # TODO Add i18n support.
             }
             structure[portal_type]['fields'] = dc_fields.copy()
         return structure
