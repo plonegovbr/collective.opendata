@@ -93,5 +93,5 @@ msgstr "La dirección URL base de la API es:"
 #. Default: "Dublin Core info for ${type} content type"
 #: ./plugins/content/__init__.py:64
 msgid "dublin_core_conttype_msg"
-msgstr "Información Dublin Core para el tipo de contenido ${type}"
+msgstr "Información Dublin Core para el tipo de contenido ${type}."
 
