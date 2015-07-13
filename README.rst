@@ -152,7 +152,7 @@ Contribute
 Support
 -------
 
-If you are having issues, please let us know sending a email to gov@plone.org.br.
+If you are having issues, please let us know, submit a ticket with the report http://github.com/plonegovbr/collective.opendata/issues
 
 License
 -------
