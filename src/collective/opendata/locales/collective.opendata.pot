@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-06-08 14:05+0000\n"
+"POT-Creation-Date: 2015-07-13 18:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,60 +26,36 @@ msgstr ""
 msgid "CMS version"
 msgstr ""
 
-#: ./plugins/content/__init__.py:31
+#: ./plugins/content/__init__.py:32
 msgid "Content Metadata"
 msgstr ""
 
-#: ./plugins/content/__init__.py:55
+#: ./plugins/content/__init__.py:56
 msgid "Content URI"
 msgstr ""
 
-#: ./plugins/content/__init__.py:57
+#: ./plugins/content/__init__.py:58
 msgid "Content id"
 msgstr ""
 
-#: ./plugins/content/__init__.py:32
+#: ./plugins/content/__init__.py:33
 msgid "Content information"
 msgstr ""
 
-#: ./plugins/content/__init__.py:56
+#: ./plugins/content/__init__.py:57
 msgid "Content site address"
 msgstr ""
 
-#: ./plugins/content/__init__.py:34
-msgid "Document"
-msgstr ""
-
-#: ./plugins/content/__init__.py:60
+#: ./plugins/content/__init__.py:61
 msgid "Dublin Core Creator element - resource author."
 msgstr ""
 
-#: ./plugins/content/__init__.py:59
+#: ./plugins/content/__init__.py:60
 msgid "Dublin Core Description element - resource name."
 msgstr ""
 
-#: ./plugins/content/__init__.py:58
+#: ./plugins/content/__init__.py:59
 msgid "Dublin Core Title element - resource name."
-msgstr ""
-
-#: ./plugins/content/__init__.py:64
-msgid "Dublin Core info for {0}"
-msgstr ""
-
-#: ./plugins/content/__init__.py:34
-msgid "Event"
-msgstr ""
-
-#: ./plugins/content/__init__.py:34
-msgid "File"
-msgstr ""
-
-#: ./plugins/content/__init__.py:34
-msgid "Folder"
-msgstr ""
-
-#: ./plugins/content/__init__.py:34
-msgid "Image"
 msgstr ""
 
 #: ./plugins/cms/__init__.py:18
@@ -88,10 +64,6 @@ msgstr ""
 
 #: ./plugins/cms/__init__.py:14
 msgid "Information about the CMS used in this portal"
-msgstr ""
-
-#: ./plugins/content/__init__.py:34
-msgid "News Item"
 msgstr ""
 
 #: ./browser/templates/opendata.pt:8
@@ -112,5 +84,10 @@ msgstr ""
 
 #: ./browser/templates/opendata.pt:23
 msgid "The base API URL is:"
+msgstr ""
+
+#. Default: "Dublin Core info for ${type} content type"
+#: ./plugins/content/__init__.py:64
+msgid "dublin_core_conttype_msg"
 msgstr ""
 

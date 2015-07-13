@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from Products.CMFPlone import PloneMessageFactory as pmf
 from collective.opendata import _
 from collective.opendata.interfaces import IDataPlugin
 from collective.opendata.plugins import DataPlugin
@@ -31,7 +32,7 @@ class Content(DataPlugin):
     title = _(u'Content Metadata')
     description = _(u'''Content information''')
 
-    portal_types = [_(u'File'), _(u'Document'), _(u'Image'), _(u'Event'), _(u'News Item'), _(u'Folder')]
+    portal_types = [pmf(u'File'), pmf(u'Page'), pmf(u'Image'), pmf(u'Event'), pmf(u'News Item'), pmf(u'Folder')]
 
     def __init__(self, *args, **kwargs):
 
@@ -60,8 +61,9 @@ class Content(DataPlugin):
             'Creator': _(u'Dublin Core Creator element - resource author.'),
         }
         for portal_type in self.portal_types:
+            msgid = _(u'dublin_core_conttype_msg', default=u'Dublin Core info for ${type} content type', mapping={u"type": portal_type})
             structure[portal_type] = {
-                'description': 'Dublin Core info for {0}'.format(portal_type)  # TODO Add i18n support.
+                'description': msgid
             }
             structure[portal_type]['fields'] = dc_fields.copy()
         return structure
