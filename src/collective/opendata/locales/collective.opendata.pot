@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-07-13 18:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./plugins/cms/__init__.py:13
+msgid "CMS"
+msgstr ""
+
+#: ./plugins/cms/__init__.py:22
+msgid "CMS used"
+msgstr ""
+
+#: ./plugins/cms/__init__.py:23
+msgid "CMS version"
+msgstr ""
+
+#: ./plugins/content/__init__.py:32
+msgid "Content Metadata"
+msgstr ""
+
+#: ./plugins/content/__init__.py:56
+msgid "Content URI"
+msgstr ""
+
+#: ./plugins/content/__init__.py:58
+msgid "Content id"
+msgstr ""
+
+#: ./plugins/content/__init__.py:33
+msgid "Content information"
+msgstr ""
+
+#: ./plugins/content/__init__.py:57
+msgid "Content site address"
+msgstr ""
+
+#: ./plugins/content/__init__.py:61
+msgid "Dublin Core Creator element - resource author."
+msgstr ""
+
+#: ./plugins/content/__init__.py:60
+msgid "Dublin Core Description element - resource name."
+msgstr ""
+
+#: ./plugins/content/__init__.py:59
+msgid "Dublin Core Title element - resource name."
+msgstr ""
+
+#: ./plugins/cms/__init__.py:18
+msgid "Information about a portal"
+msgstr ""
+
+#: ./plugins/cms/__init__.py:14
+msgid "Information about the CMS used in this portal"
+msgstr ""
+
+#: ./browser/templates/opendata.pt:8
+msgid "Open Data"
+msgstr ""
+
+#: ./plugins/cms/__init__.py:21
+msgid "Site description"
+msgstr ""
+
+#: ./plugins/cms/__init__.py:20
+msgid "Site title"
+msgstr ""
+
+#: ./browser/templates/opendata.pt:14
+msgid "The Plone Open Data API."
+msgstr ""
+
+#: ./browser/templates/opendata.pt:23
+msgid "The base API URL is:"
+msgstr ""
+
+#. Default: "Dublin Core info for ${type} content type"
+#: ./plugins/content/__init__.py:64
+msgid "dublin_core_conttype_msg"
+msgstr ""
+

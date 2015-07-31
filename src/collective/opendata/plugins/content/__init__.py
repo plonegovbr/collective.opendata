@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from Products.CMFPlone import PloneMessageFactory as pmf
+from collective.opendata import _
 from collective.opendata.interfaces import IDataPlugin
 from collective.opendata.plugins import DataPlugin
 from plone import api
@@ -27,10 +29,10 @@ class Content(DataPlugin):
     implements(IDataPlugin)
 
     name = 'content'
-    title = 'Content Metadata'
-    description = '''Content information'''
+    title = _(u'Content Metadata')
+    description = _(u'''Content information''')
 
-    portal_types = ['File', 'Document', 'Image', 'Event', 'News Item', 'Folder']
+    portal_types = [pmf(u'File'), pmf(u'Page'), pmf(u'Image'), pmf(u'Event'), pmf(u'News Item'), pmf(u'Folder')]
 
     def __init__(self, *args, **kwargs):
 
@@ -51,16 +53,17 @@ class Content(DataPlugin):
     def structure(self):
         structure = {}
         dc_fields = {
-            'uri': 'Content URI',
-            'url': 'Content site address',
-            'Id': 'Content id',
-            'Title': 'Dublin Core Title element - resource name.',
-            'Description': 'Dublin Core Description element - resource name.',
-            'Creator': 'Dublin Core Creator element - resource author.',
+            'uri': _(u'Content URI'),
+            'url': _(u'Content site address'),
+            'Id': _(u'Content id'),
+            'Title': _(u'Dublin Core Title element - resource name.'),
+            'Description': _(u'Dublin Core Description element - resource name.'),
+            'Creator': _(u'Dublin Core Creator element - resource author.'),
         }
         for portal_type in self.portal_types:
+            msgid = _(u'dublin_core_conttype_msg', default=u'Dublin Core info for ${type} content type', mapping={u"type": portal_type})
             structure[portal_type] = {
-                'description': 'Dublin Core info for {0}'.format(portal_type)
+                'description': msgid
             }
             structure[portal_type]['fields'] = dc_fields.copy()
         return structure

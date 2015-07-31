@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
+from DateTime import DateTime
 from collective.opendata.interfaces import IDataPlugin
 from datetime import date
 from datetime import datetime
-from DateTime import DateTime
 from plone.namedfile.file import NamedBlobImage
 from z3c.relationfield.interfaces import IRelationValue
 from zope.component import getUtilitiesFor

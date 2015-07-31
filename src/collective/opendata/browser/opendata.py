@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from collective.opendata import utils
 from Products.Five import BrowserView
+from collective.opendata import utils
 
 
 class OpenDataView(BrowserView):
