@@ -28,7 +28,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    keywords='plone open data odata api',
+    keywords='plone open data opendata odata api',
     author='PloneGov-BR',
     author_email='gov@plone.org.br',
     url='https://github.com/plonegovbr/collective.opendata',
