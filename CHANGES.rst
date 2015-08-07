@@ -23,3 +23,4 @@ Changelog
   [macagua]
 
 - Initial release.
+  [ericof]
