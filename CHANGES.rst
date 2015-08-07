@@ -4,6 +4,9 @@ Changelog
 1.0a1 (unreleased)
 ------------------
 
+- Fix content type from Page to Document.
+  [jeanferri]
+
 - Prepare for release on pypi.
   [jeanferri]
 

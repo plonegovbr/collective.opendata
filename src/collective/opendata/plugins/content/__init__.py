@@ -5,8 +5,8 @@ from collective.opendata.interfaces import IDataPlugin
 from collective.opendata.plugins import DataPlugin
 from plone import api
 from zope.interface import implements
-import rdflib
 from rdflib.namespace import RDF, RDFS
+import rdflib
 
 DC_MAPPING = {
     'contributor': 'listContributors',
@@ -34,7 +34,7 @@ class Content(DataPlugin):
     title = _(u'Content Metadata')
     description = _(u'''Content information''')
 
-    portal_types = [pmf(u'File'), pmf(u'Page'), pmf(u'Image'), pmf(u'Event'), pmf(u'News Item'), pmf(u'Folder')]
+    portal_types = [pmf(u'File'), pmf(u'Document'), pmf(u'Image'), pmf(u'Event'), pmf(u'News Item'), pmf(u'Folder')]
 
     def __init__(self, *args, **kwargs):
 
@@ -122,7 +122,7 @@ class Content(DataPlugin):
             item['title'] = brain.Title
             items.append(item)
         return items
-    
+
     @property
     def dc_properties(self):
         g = rdflib.Graph()
