@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0a1 (unreleased)
+1.0a1 (2015-08-07)
 ------------------
 
 - Add Portuguese translation.
