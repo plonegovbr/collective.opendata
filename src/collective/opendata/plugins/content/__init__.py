@@ -5,6 +5,8 @@ from collective.opendata.interfaces import IDataPlugin
 from collective.opendata.plugins import DataPlugin
 from plone import api
 from zope.interface import implements
+import rdflib
+from rdflib.namespace import RDF, RDFS
 
 DC_MAPPING = {
     'contributor': 'listContributors',
@@ -120,3 +122,16 @@ class Content(DataPlugin):
             item['title'] = brain.Title
             items.append(item)
         return items
+    
+    @property
+    def dc_properties(self):
+        g = rdflib.Graph()
+        g.parse("dcelements.rdf")
+        properties = g.subjects(RDF['type'], RDF['Property'])
+        prop_dict = {}
+        for prop in properties:
+            prop_dict[prop.split('/')[-1]] = {
+                'label' : g.value(prop, RDFS['label']),
+                'description' : g.value(prop, RDFS['comment'])
+            }
+        return prop_dict

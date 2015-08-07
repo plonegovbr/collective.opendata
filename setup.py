@@ -41,6 +41,7 @@ setup(
         'plone.api',
         'plone.namedfile',
         'Products.CMFPlone >=4.3',
+        'rdflib',
         'setuptools',
         'z3c.relationfield',
         'zope.component',
