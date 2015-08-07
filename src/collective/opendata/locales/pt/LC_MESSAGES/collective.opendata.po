@@ -1,0 +1,97 @@
+# Jean Ferri <jeanferri@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.opendata\n"
+"POT-Creation-Date: 2015-08-07 19:00+0000\n"
+"PO-Revision-Date: 2015-08-07 19:56-0300\n"
+"Last-Translator: Jean Ferri <jeanferri@gmail.com>\n"
+"Language-Team: PT <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Code: pt\n"
+"Language-Name: Português\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.opendata\n"
+"Language: pt\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Is-Fallback-For: pt-br pt-pt\n"
+
+#: ./plugins/cms/__init__.py:13
+msgid "CMS"
+msgstr "Sistema de Gerenciamento de Conteúdo (CMS)"
+
+#: ./plugins/cms/__init__.py:22
+msgid "CMS used"
+msgstr "CMS usado."
+
+#: ./plugins/cms/__init__.py:23
+msgid "CMS version"
+msgstr "Versão do CMS."
+
+#: ./plugins/content/__init__.py:32
+msgid "Content Metadata"
+msgstr "Metadados do Conteúdo"
+
+#: ./plugins/content/__init__.py:56
+msgid "Content URI"
+msgstr "URI do conteúdo."
+
+#: ./plugins/content/__init__.py:58
+msgid "Content id"
+msgstr "Identificador do conteúdo."
+
+#: ./plugins/content/__init__.py:33
+msgid "Content information"
+msgstr "Informação do conteúdo"
+
+#: ./plugins/content/__init__.py:57
+msgid "Content site address"
+msgstr "Endereço do conteúdo no site."
+
+#: ./plugins/content/__init__.py:61
+msgid "Dublin Core Creator element - resource author."
+msgstr "Criador do elemento Dublin Core - autor do recurso."
+
+#: ./plugins/content/__init__.py:60
+msgid "Dublin Core Description element - resource name."
+msgstr "Descrição do elemento Dublin Core - detalhes do recurso."
+
+#: ./plugins/content/__init__.py:59
+msgid "Dublin Core Title element - resource name."
+msgstr "Título do elemento Dublin Core - nome do recurso."
+
+#: ./plugins/cms/__init__.py:18
+msgid "Information about a portal"
+msgstr "Informação sobre o portal"
+
+#: ./plugins/cms/__init__.py:14
+msgid "Information about the CMS used in this portal"
+msgstr "Informação sobre o CMS usado neste portal"
+
+#: ./browser/templates/opendata.pt:8
+msgid "Open Data"
+msgstr "Dados Abertos (Open Data)"
+
+#: ./plugins/cms/__init__.py:21
+msgid "Site description"
+msgstr "Descrição do site."
+
+#: ./plugins/cms/__init__.py:20
+msgid "Site title"
+msgstr "Título do site."
+
+#: ./browser/templates/opendata.pt:14
+msgid "The Plone Open Data API."
+msgstr "A API de Dados Abertos para o CMS Plone."
+
+#: ./browser/templates/opendata.pt:23
+msgid "The base API URL is:"
+msgstr "O endereço base da API é:"
+
+#. Default: "Dublin Core info for ${type} content type"
+#: ./plugins/content/__init__.py:64
+msgid "dublin_core_conttype_msg"
+msgstr "Informação Dublin Core para o tipo de conteúdo ${type}."
+

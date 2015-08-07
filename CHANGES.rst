@@ -4,6 +4,9 @@ Changelog
 1.0a1 (unreleased)
 ------------------
 
+- Add Portuguese translation.
+  [jeanferri]
+
 - Fix content type from Page to Document.
   [jeanferri]
 
