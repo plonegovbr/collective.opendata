@@ -26,19 +26,19 @@
               tal:content="plugin/uri">
               apidata/foo
             </a><br />
-            <span tal:content="plugin/description">My Plugin</span><br />
+            <h3 tal:content="plugin/description">My Plugin</h3>
             <!-- Entities -->
             <ul>
               <li tal:repeat="entity plugin/entities">
-                <a href=""
+                <strong><a href=""
                   tal:attributes="href entity/uri"
                   tal:content="entity/title">
                   apidata/foo
-                </a>: <span tal:content="entity/description">A text about this entity</span>
+                </a>:</strong> <span tal:content="entity/description">A text about this entity</span>
                 <!-- Fields -->
                 <ul>
                   <li tal:repeat="field entity/fields">
-                    <span tal:content="field/title">Field</span> - <span tal:content="field/description">A text about this field</span>
+                    <em tal:content="field/title">Field</em> - <span tal:content="field/description">A text about this field</span>
                   </li>
                 </ul>
               </li>

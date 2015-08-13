@@ -36,5 +36,5 @@ class CMS(DataPlugin):
         data['title'] = site.title
         data['description'] = site.description
         data['software'] = 'collective.opendata'
-        data['software_version'] = '0.1'
+        data['software_version'] = '1.0a2'
         return data

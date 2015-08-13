@@ -9,8 +9,8 @@ from rdflib.namespace import RDF, RDFS
 import rdflib
 
 DC_MAPPING = {
-    'contributor': 'listContributors',
-    'coverage': '',
+    'contributor': 'Contributors',
+    'coverage': 'getLocation',
     'creator': 'Creator',
     'date': 'Date',
     'description': 'Description',
@@ -18,12 +18,12 @@ DC_MAPPING = {
     'identifier': 'Identifier',
     'language': 'Language',
     'publisher': 'Publisher',
-    'relation': '',
+    'relation': '', # getRefs: redefined in _dc_content
     'rights': 'Rights',
-    'source': '',
+    'source': '', # don't know what to map
     'subject': 'Subject',
     'title': 'Title',
-    'type': ''
+    'type': '' # Type: redefined in _dc_content - error
 }
 
 
@@ -55,15 +55,15 @@ class Content(DataPlugin):
     def structure(self):
         structure = {}
         dc_fields = {
-            'uri': _(u'Content URI'),
-            'url': _(u'Content site address'),
-            'Id': _(u'Content id'),
-            'Title': _(u'Dublin Core Title element - resource name.'),
-            'Description': _(u'Dublin Core Description element - resource name.'),
-            'Creator': _(u'Dublin Core Creator element - resource author.'),
+            'uri': _(u'Content permanent URI'),
+            'identifier': _(u'Content site address'),
+            'uid': _(u'Content unique identifier'),
+            'title': _(u'Dublin Core Title element - resource name.'),
+            'description': _(u'Dublin Core Description element - resource abstract.'),
+            'creator': _(u'Dublin Core Creator element - resource author.'),
         }
         for portal_type in self.portal_types:
-            msgid = _(u'dublin_core_conttype_msg', default=u'Dublin Core info for ${type} content type', mapping={u"type": portal_type})
+            msgid = _(u'dublin_core_conttype_msg', default=u'Dublin Core info for ${type} content type', mapping={u'type': portal_type})
             structure[portal_type] = {
                 'description': msgid
             }
@@ -82,6 +82,8 @@ class Content(DataPlugin):
                 # Using method
                 data[key] = getattr(content, value)()
         data['type'] = content.portal_type
+        related = content.getRefs()
+        data['relation'] = ['{0}/{1}/{2}'.format(self.uri, o.portal_type, o.UID()) for o in related]
         return data
 
     def content(self, portal_type=None, uid=None):
@@ -120,6 +122,8 @@ class Content(DataPlugin):
                 uid
             )
             item['title'] = brain.Title
+            item['description'] = brain.Description
+            item['creator'] = brain.Creator
             items.append(item)
         return items
 

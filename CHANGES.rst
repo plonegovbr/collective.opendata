@@ -4,7 +4,11 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve dublin core support for content metadata.
+  [jeanferri]
+
+- Reformat API documentation page.
+  [jeanferri]
 
 
 1.0a1 (2015-08-07)

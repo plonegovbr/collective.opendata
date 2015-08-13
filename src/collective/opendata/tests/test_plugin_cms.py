@@ -52,5 +52,5 @@ class CMSPluginTestCase(unittest.TestCase):
         )
         self.assertEqual(
             data['software_version'],
-            '0.1'
+            '1.0a2'
         )
