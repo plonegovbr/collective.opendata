@@ -4,6 +4,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Fix a bug with content types were the name have spaces
+  [jeanferri]
+
 - Improve dublin core support for content metadata.
   [jeanferri]
 

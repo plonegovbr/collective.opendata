@@ -23,7 +23,7 @@ DC_MAPPING = {
     'source': '', # don't know what to map
     'subject': 'Subject',
     'title': 'Title',
-    'type': '' # Type: redefined in _dc_content - error
+    'type': '' # Type: redefined in _dc_content (bc error)
 }
 
 
@@ -34,7 +34,7 @@ class Content(DataPlugin):
     title = _(u'Content Metadata')
     description = _(u'''Content information''')
 
-    portal_types = [pmf(u'File'), pmf(u'Document'), pmf(u'Image'), pmf(u'Event'), pmf(u'News Item'), pmf(u'Folder')]
+    portal_types = [pmf(u'Document'), pmf(u'Event'), pmf(u'File'), pmf(u'Folder'), pmf(u'Image'), pmf(u'News Item')]
 
     def __init__(self, *args, **kwargs):
 

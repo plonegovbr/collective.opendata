@@ -41,7 +41,7 @@ class APIDataView(BrowserPage):
         entity = None
         subpath = self._subpath()
         if len(subpath) > 1:
-            entity_id = subpath[1].replace(' ', '')
+            entity_id = subpath[1].replace(' ', '_')
             plugin = self.plugin
             entity = getattr(plugin, entity_id, None)
         return entity
