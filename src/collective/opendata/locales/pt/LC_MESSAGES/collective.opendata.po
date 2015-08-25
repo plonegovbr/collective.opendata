@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.opendata\n"
 "POT-Creation-Date: 2015-08-07 19:00+0000\n"
-"PO-Revision-Date: 2015-08-07 19:56-0300\n"
+"PO-Revision-Date: 2015-08-25 16:35-0300\n"
 "Last-Translator: Jean Ferri <jeanferri@gmail.com>\n"
 "Language-Team: PT <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.opendata\n"
 "Language: pt\n"
-"X-Generator: Virtaal 0.7.1\n"
 "X-Is-Fallback-For: pt-br pt-pt\n"
 
 #: ./plugins/cms/__init__.py:13
@@ -35,12 +34,12 @@ msgid "Content Metadata"
 msgstr "Metadados do Conteúdo"
 
 #: ./plugins/content/__init__.py:56
-msgid "Content URI"
-msgstr "URI do conteúdo."
+msgid "Content permanent URI"
+msgstr "URI permanente do conteúdo."
 
 #: ./plugins/content/__init__.py:58
-msgid "Content id"
-msgstr "Identificador do conteúdo."
+msgid "Content unique identifier"
+msgstr "Identificador único do conteúdo."
 
 #: ./plugins/content/__init__.py:33
 msgid "Content information"
@@ -55,7 +54,7 @@ msgid "Dublin Core Creator element - resource author."
 msgstr "Criador do elemento Dublin Core - autor do recurso."
 
 #: ./plugins/content/__init__.py:60
-msgid "Dublin Core Description element - resource name."
+msgid "Dublin Core Description element - resource abstract."
 msgstr "Descrição do elemento Dublin Core - detalhes do recurso."
 
 #: ./plugins/content/__init__.py:59

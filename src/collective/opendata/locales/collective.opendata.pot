@@ -31,11 +31,11 @@ msgid "Content Metadata"
 msgstr ""
 
 #: ./plugins/content/__init__.py:56
-msgid "Content URI"
+msgid "Content permanent URI"
 msgstr ""
 
 #: ./plugins/content/__init__.py:58
-msgid "Content id"
+msgid "Content unique identifier"
 msgstr ""
 
 #: ./plugins/content/__init__.py:33
@@ -51,7 +51,7 @@ msgid "Dublin Core Creator element - resource author."
 msgstr ""
 
 #: ./plugins/content/__init__.py:60
-msgid "Dublin Core Description element - resource name."
+msgid "Dublin Core Description element - resource abstract."
 msgstr ""
 
 #: ./plugins/content/__init__.py:59

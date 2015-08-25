@@ -4,6 +4,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Fix translations
+  [jeanferri]
+
 - Workaround to avoid scape msgid on /apidata/content description
   [jeanferri]
 
