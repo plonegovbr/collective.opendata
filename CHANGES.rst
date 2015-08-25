@@ -4,6 +4,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Workaround to avoid scape msgid on /apidata/content description
+  [jeanferri]
+
 - Fix a bug with content types were the name have spaces
   [jeanferri]
 

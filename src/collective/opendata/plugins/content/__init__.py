@@ -65,7 +65,8 @@ class Content(DataPlugin):
         for portal_type in self.portal_types:
             msgid = _(u'dublin_core_conttype_msg', default=u'Dublin Core info for ${type} content type', mapping={u'type': portal_type})
             structure[portal_type] = {
-                'description': msgid
+                #'description': msgid, # FIX: Printing only msgid on /apidata/content
+                'description': 'Dublin Core info for {0} content type'.format(portal_type)
             }
             structure[portal_type]['fields'] = dc_fields.copy()
         return structure
