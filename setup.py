@@ -3,7 +3,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '1.0a2'
+version = '1.0a3.dev0'
 description = 'A generic implementation of the Open Data Protocol for Plone.'
 long_description = (
     open('README.rst').read() + '\n' +
