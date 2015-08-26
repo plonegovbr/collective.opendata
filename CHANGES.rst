@@ -4,6 +4,9 @@ Changelog
 1.0a2 (unreleased)
 ------------------
 
+- Rename pt translation to pt_BR
+  [jeanferri]
+
 - Fix translations
   [jeanferri]
 
