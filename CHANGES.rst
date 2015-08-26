@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0a2 (unreleased)
+1.0a2 (2015-08-26)
 ------------------
 
 - Rename pt translation to pt_BR
