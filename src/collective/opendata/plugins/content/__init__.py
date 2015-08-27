@@ -4,8 +4,9 @@ from collective.opendata import _
 from collective.opendata.interfaces import IDataPlugin
 from collective.opendata.plugins import DataPlugin
 from plone import api
+from rdflib.namespace import RDF
+from rdflib.namespace import RDFS
 from zope.interface import implements
-from rdflib.namespace import RDF, RDFS
 import rdflib
 
 DC_MAPPING = {
@@ -18,12 +19,12 @@ DC_MAPPING = {
     'identifier': 'Identifier',
     'language': 'Language',
     'publisher': 'Publisher',
-    'relation': '', # getRefs: redefined in _dc_content
+    'relation': '',  # getRefs: redefined in _dc_content
     'rights': 'Rights',
-    'source': '', # don't know what to map
+    'source': '',  # don't know what to map
     'subject': 'Subject',
     'title': 'Title',
-    'type': '' # Type: redefined in _dc_content (bc error)
+    'type': ''  # Type: redefined in _dc_content (bc error)
 }
 
 
@@ -63,9 +64,9 @@ class Content(DataPlugin):
             'creator': _(u'Dublin Core Creator element - resource author.'),
         }
         for portal_type in self.portal_types:
-            msgid = _(u'dublin_core_conttype_msg', default=u'Dublin Core info for ${type} content type', mapping={u'type': portal_type})
+            # msgid = _(u'dublin_core_conttype_msg', default=u'Dublin Core info for ${type} content type', mapping={u'type': portal_type})
             structure[portal_type] = {
-                #'description': msgid, # FIX: Printing only msgid on /apidata/content
+                # 'description': msgid, # FIX: Printing only msgid on /apidata/content
                 'description': 'Dublin Core info for {0} content type'.format(portal_type)
             }
             structure[portal_type]['fields'] = dc_fields.copy()
@@ -136,7 +137,7 @@ class Content(DataPlugin):
         prop_dict = {}
         for prop in properties:
             prop_dict[prop.split('/')[-1]] = {
-                'label' : g.value(prop, RDFS['label']),
-                'description' : g.value(prop, RDFS['comment'])
+                'label': g.value(prop, RDFS['label']),
+                'description': g.value(prop, RDFS['comment'])
             }
         return prop_dict
