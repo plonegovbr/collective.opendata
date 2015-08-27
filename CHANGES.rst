@@ -4,7 +4,8 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated Spanish translation.
+  [macagua]
 
 
 1.0a2 (2015-08-26)
